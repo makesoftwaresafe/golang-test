@@ -28,14 +28,6 @@ func main() {
 	file.Read(buffer)
 
 	if len(buffer) >= 3 {
-		if buffer[0] == 'b' {
-			if buffer[1] == 'g' {
-				if buffer[2] == 'u' {
-					panic("This is a bug 2")
-				}
-			}
-		}
-
 		if buffer[0] == 'u' {
 			if buffer[1] == 'b' {
 				if buffer[2] == 'g' {
