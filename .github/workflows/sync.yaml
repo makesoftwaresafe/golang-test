@@ -1,11 +1,9 @@
 name: Scheduled Merge Remote Action
-on:
-  schedule:
-  - cron: 0 0 * * *
+on:  
   workflow_dispatch:
 jobs:
   merge-upstream:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - name: Checkout
       uses: actions/checkout@v2
