@@ -10,15 +10,8 @@ env:
 jobs:
   build:
     name: ${{ matrix.os }} shared=${{ matrix.shared }} ${{ matrix.build_type }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        shared: [false]
-        build_type: [Release]
-        include:
-        - os: ubuntu-latest
-          triplet: x64-linux
+    runs-on: self-hosted
+    
     steps:
     - uses: actions/checkout@v2
     - name: Log in to the Container registry
